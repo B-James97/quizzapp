@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Questions</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-header></ion-header>
+
+  <p>{{ questions.question }}</p>
+
+  <p *ngIf="answer === 1">
+    Bonne réponse
+  </p>
+
+  <p *ngIf="answer === 2">
+    Mauvaise réponse
+  </p>
+
+
+  <ion-footer>
+    <div class="fin" *ngIf="hideButtonNext">
+      <button ion-button (click)="clickOnTrue()">Vrai</button>
+      <button ion-button (click)="clickOnFalse()">Faux</button>
+    </div>
+
+    <div class="vrai" *ngIf="stickers === 1">
+      <img src="assets/imgs/vrai.png">
+    </div>
+    <div class="faux" *ngIf="stickers === 2">
+      <img src="assets/imgs/faux.png">
+    </div>
+
+    <div class="buttonNext" *ngIf="!hideButtonNext">
+      <button ion-button full>Suivante</button>
+    </div>
+
+
+  </ion-footer>
+
+</ion-content>

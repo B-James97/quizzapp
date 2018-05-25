@@ -1,14 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Quizz Down
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<div class="wrapper">
+
+<button ion-button large (click)="playing()">Jouer</button>
+<button ion-button large (click)="rang()">Classement</button>
+<button ion-button large (click)="ask()">Proposer une question</button>
+<button ion-button large (click)="choix()">Option</button>
+
+</div>
 </ion-content>
